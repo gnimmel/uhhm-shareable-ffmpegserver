@@ -1,4 +1,4 @@
-# uhhh-shareable-ffmpegserver
+# uhhm-shareable-ffmpegserver
 Uses ffmpeg server to render a short video from a p5js sketch
 
 ### TODOS:
