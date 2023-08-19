@@ -1,0 +1,60 @@
+{
+  "name": "uhhm-shareable",
+  "version": "1.0.0",
+  "description": "Server for encoding canvas frames as video",
+  "main": "start.js",
+  "bin": "start.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --recursive",
+    "start": "node start.js",
+    "build": "pkg ."
+  },
+  "pkg": {
+    "targets": [
+      "latest-linux-x64",
+      "latest-macos-arm64",
+      "latest-win-x64"
+    ],
+    "assets": [
+      "output/**/*",
+      "public/**/*",
+      "./node_modules/@ffmpeg-installer/**"
+    ],
+    "outputPath": "dist"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "busboy": "^0.3.1",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "optionator": "^0.8.3",
+    "playwright": "^1.35.0",
+    "playwright-core": "^1.35.0",
+    "tmp": "^0.1.0",
+    "ws": "^7.2.1",
+    "xvfb": "^0.4.0"
+  },
+  "devDependencies": {
+    "almond": "^0.3.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-google-camelcase": "0.0.2",
+    "eslint-plugin-html": "git+https://github.com/greggman/eslint-plugin-html.git#fix-space-eating",
+    "eslint-plugin-one-variable-per-var": "0.0.3",
+    "eslint-plugin-optional-comma-spacing": "0.0.4",
+    "eslint-plugin-require-trailing-comma": "0.0.1",
+    "grunt": "^1.0.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "gruntify-eslint": "^5.0.0",
+    "mocha": "^7.0.0",
+    "request": "^2.88.0",
+    "requirejs": "^2.3.6",
+    "semver": "^7.1.1",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
+  }
+}
